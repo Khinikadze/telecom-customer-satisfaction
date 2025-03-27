@@ -1,0 +1,25 @@
+NPSDatasetGenerator:
+  data_folder: "data"
+  num_observations: 10000
+  min_date: "2023-01-01"
+  max_date: "2024-12-31"
+
+InquiryDatasetGenerator:
+  data_folder: "data"
+  num_observations: 10000
+  min_date: "2023-01-01"
+  max_date: "2024-12-31"
+
+DataVisualizer:
+  output_dir: "data/imgs"
+
+DataProcessor:
+  output_dir: "data/interim"
+
+AnomalyDetector:
+    window_size: 7
+    z_threshold: 3.0
+    ml_contamination: 0.05
+    min_group_size: 2
+    clip_contributions: True
+    output_dir: "data/processed"

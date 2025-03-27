@@ -23,8 +23,8 @@ def main():
     nps_generator = NPSDatasetGenerator(**nps_generator_params)
     inquiry_generator = InquiryDatasetGenerator(**inquiry_generator_params)
 
-    # nps_generator.generate_dataset()
-    # inquiry_generator.generate_dataset()
+    nps_generator.generate_dataset()
+    inquiry_generator.generate_dataset()
 
     data_visualizer = DataVisualizer(nps_path=nps_generator.out_path,
                                      inquiry_path=inquiry_generator.out_path,

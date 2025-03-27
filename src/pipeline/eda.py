@@ -429,10 +429,8 @@ class DataVisualizer:
                 fontsize=12, verticalalignment='top', bbox=dict(facecolor='white', alpha=0.8))
         
         plt.tight_layout()
-        plt.show()
-        
-    # if filename:
-    #     fig.savefig(filename, dpi=300)
+
+        self._save_plot(filename)
 
 
     def generate_images(self):
@@ -464,16 +462,16 @@ class DataVisualizer:
             filename="timeline_inquiry"
         )
 
-        for segment in self.nps_segments:
-            self.plot_daily_dynamics_segment(
-                df=self.df_nps,
-                segment=segment,
-                metric_name='NPS', 
-                func='mean',
-                title="Daily NPS dynamic",
-                output_dir=self.output_dir / "segments_nps_time",
-                filename=f"timeline_nps_{segment}"
-                )
+        # for segment in self.nps_segments:
+        #     self.plot_daily_dynamics_segment(
+        #         df=self.df_nps,
+        #         segment=segment,
+        #         metric_name='NPS', 
+        #         func='mean',
+        #         title="Daily NPS dynamic",
+        #         output_dir=self.output_dir / "segments_nps_time",
+        #         filename=f"timeline_nps_{segment}"
+        #         )
         
         for segment in self.inquiry_segments:
             self.plot_daily_dynamics_segment(
